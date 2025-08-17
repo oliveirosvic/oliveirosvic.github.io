@@ -19,7 +19,14 @@
     h1{font-size:clamp(28px,4vw,42px); margin:8px 0 0}
     p.lead{color:var(--sub); margin:6px 0 0}
 
-    .card{background:var(--card); border:1px solid rgba(255,255,255,.06); box-shadow:0 12px 32px rgba(0,0,0,.35); border-radius:18px; padding:18px;}
+    .card{
+      background:var(--card); 
+      border:1px solid rgba(255,255,255,.06); 
+      box-shadow:0 12px 32px rgba(0,0,0,.35); 
+      border-radius:18px; 
+      padding:18px;
+      margin-bottom:20px; /* espaçamento entre seções */
+    }
 
     /* Player */
     .player{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:8px}
@@ -38,8 +45,6 @@
     .gallery img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; transition:transform .2s ease, box-shadow .2s ease; cursor:zoom-in}
     .gallery img:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.35)}
 
-    
-
     footer{opacity:.8; text-align:center; font-size:12px; margin:28px 0 12px}
 
     @media (max-width:760px){ .counter{grid-template-columns:repeat(3,1fr);} }
@@ -48,7 +53,6 @@
 <body>
   <div class="wrap">
     <header>
-      <!-- Substitua as imagens abaixo por fotos de vocês (mantenha os nomes/pastas ou ajuste os src) -->
       <img class="avatar" src="images/nos-1.jpg" alt="Foto 1 do casal">
       <div>
         <h1>Guilherme ❤ Viviane</h1>
@@ -80,7 +84,6 @@
     <section class="card" aria-labelledby="fotos-title">
       <h2 id="fotos-title" style="margin:6px 0 10px">Nossas fotos</h2>
       <div class="gallery">
-        <!-- Coloque suas fotos na pasta images e ajuste os nomes abaixo -->
         <img src="images/nos-1.jpg" alt="nós 1">
         <img src="images/nos-2.jpg" alt="nós 2">
         <img src="images/nos-3.jpg" alt="nós 3">
@@ -92,29 +95,20 @@
       </div>
     </section>
 
-    
-
     <footer>
       Feito com 💖 – personalize este arquivo e hospede grátis (GitHub Pages / Netlify).
     </footer>
   </div>
 
   <script>
-    // ======= CONFIGURAÇÃO RÁPIDA =======
-    // 1) Coloque a data/hora do início do namoro (AAAA-MM-DDTHH:MM:SS)
     const START_ISO = '2024-05-05T00:00:00';
-    // 2) Troque o título/nome lá no <h1> se quiser ;)
-
-    // Mostra a data bonitinha
     const sinceText = document.getElementById('sinceText');
     sinceText.textContent = new Date(START_ISO).toLocaleString('pt-BR', {
       year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit'
     });
 
-    // Cálculo preciso em anos/meses/dias/horas/min/seg respeitando meses variáveis e anos bissextos
     function diffYMDHMS(startDate, now){
       let years = now.getFullYear() - startDate.getFullYear();
-      // Se ainda não chegou o "aniversário" neste ano (considerando hora/min/seg), tira 1
       const beforeAnniv = () => {
         if (now.getMonth() !== startDate.getMonth()) return now.getMonth() < startDate.getMonth();
         if (now.getDate() !== startDate.getDate()) return now.getDate() < startDate.getDate();
@@ -152,7 +146,6 @@
     tick();
     setInterval(tick, 1000);
 
-    // Player
     const playBtn = document.getElementById('playBtn');
     const audio = document.getElementById('song');
     let playing = false;
