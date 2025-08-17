@@ -9,6 +9,7 @@
   <style>
     a[href="https://github.com/oliveirosvic"] {
     display: none;
+    }
     :root{
       --bg:#0f0f14; --card:#171721; --accent:#ff6aa2; --text:#f6f7fb; --sub:#b8bbcf;
     }
