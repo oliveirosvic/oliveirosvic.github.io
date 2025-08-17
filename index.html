@@ -21,6 +21,12 @@
 
     .card{background:var(--card); border:1px solid rgba(255,255,255,.06); box-shadow:0 12px 32px rgba(0,0,0,.35); border-radius:18px; padding:18px;}
 
+    /* Player */
+    .player{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:8px}
+    .btn{background:var(--accent); color:#101014; border:0; border-radius:999px; padding:10px 16px; font-weight:700; cursor:pointer; box-shadow:0 10px 24px rgba(255,106,162,.35)}
+    .btn:active{transform:translateY(1px)}
+    .hint{color:var(--sub); font-size:13px}
+    
     /* Contador */
     .counter{display:grid; grid-template-columns:repeat(6, minmax(110px,1fr)); gap:10px; margin-top:18px}
     .tile{background:#141420; border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:16px; text-align:center}
@@ -32,11 +38,7 @@
     .gallery img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; transition:transform .2s ease, box-shadow .2s ease; cursor:zoom-in}
     .gallery img:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.35)}
 
-    /* Player */
-    .player{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:8px}
-    .btn{background:var(--accent); color:#101014; border:0; border-radius:999px; padding:10px 16px; font-weight:700; cursor:pointer; box-shadow:0 10px 24px rgba(255,106,162,.35)}
-    .btn:active{transform:translateY(1px)}
-    .hint{color:var(--sub); font-size:13px}
+    
 
     footer{opacity:.8; text-align:center; font-size:12px; margin:28px 0 12px}
 
