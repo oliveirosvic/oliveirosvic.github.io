@@ -7,9 +7,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    a[href="https://github.com/oliveirosvic"] {
-    display: none;
-    }
     :root{
       --bg:#0f0f14; --card:#171721; --accent:#ff6aa2; --text:#f6f7fb; --sub:#b8bbcf;
     }
@@ -57,7 +54,7 @@
     </header>
 
     <section class="card" aria-labelledby="contador-title">
-      <h2 id="contador-title" style="margin:6px 0 4px">Quanto tempo estamos namorando</h2>
+      <h2 id="contador-title" style="margin:6px 0 4px">Se amando há: </h2>
       <div class="counter" id="counter">
         <div class="tile"><div class="value" id="years">0</div><div class="label">anos</div></div>
         <div class="tile"><div class="value" id="months">0</div><div class="label">meses</div></div>
