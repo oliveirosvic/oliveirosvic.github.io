@@ -70,7 +70,7 @@
     </section>
 
     <section class="card" aria-labelledby="contador-title">
-      <h2 id="contador-title" style="margin:6px 0 4px">Quanto tempo estamos namorando</h2>
+      <h2 id="contador-title" style="margin:6px 0 4px">Se amando há: </h2>
       <div class="counter" id="counter">
         <div class="tile"><div class="value" id="years">0</div><div class="label">anos</div></div>
         <div class="tile"><div class="value" id="months">0</div><div class="label">meses</div></div>
@@ -101,7 +101,7 @@
   </div>
 
   <script>
-    const START_ISO = '2024-05-05T00:00:00';
+    const START_ISO = '2024-05-03T21:00:00';
     const sinceText = document.getElementById('sinceText');
     sinceText.textContent = new Date(START_ISO).toLocaleString('pt-BR', {
       year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit'
